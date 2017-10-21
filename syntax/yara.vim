@@ -31,5 +31,52 @@ if exists("b:current_syntax")
 	finish
 endif
 
+syntax case match
+
+" Keywords
+syntax keyword yaraKeyword all and any ascii at condition entrypoint false filesize for fullword global import in include int16 int16be int32 int32be int8 int8be matches meta nocase not of or private rule strings them true uint16 uint16be uint32 uint32be uint8 uint8be wide contains
+syntax keyword yaraRuleSection condition meta strings
+
+" Identifiers
+syntax match yaraIdentifier /$[a-zA-Z0-9_]*/
+syntax match yaraIdentifierOccurrence /#[a-zA-Z0-9_]*/
+syntax match yaraIdentifierOffset /@[a-zA-Z0-9_]*\(\[[^\]]\+\]\)\?/
+syntax match yaraIdentifierMatchLength /![a-zA-Z0-9_]*\(\[[^\]]\+\]\)\?/
+
+" Strings
+syntax region yaraStringText start=/"/ end=/"/ skip=/\(\\\\\|\\"\)/ contains=yaraStringTextFormat
+syntax match yaraStringTextFormat /\(\\"\|\\\\\|\\t\|\\n\|\\x[0-9a-fA-F]\{2\}\)/ contained
+syntax match yaraStringHex /{\([-0-9a-fA-F \t()\[\]|?]\|\n\)\+[-0-9a-fA-F()\[\]|?]\([-0-9a-fA-F \t()\[\]|?]\|\n\)\+}/ contains=yaraStringHexFormat
+syntax match yaraStringHexFormat /[-()\[\]|?]/ contained
+syntax region yaraStringRegex start=/\// end=/\// skip=/\(\\\\\|\\\/\)/
+syntax match yaraStringRegexModifiers /\/\@<=[is]\+\>/
+
+" Numbers
+syntax match yaraNumberInt /\<\([0-9]\+\|0x[0-9a-fA-F]\+\)\>/
+syntax match yaraNumberFloat /\<[0-9]\+\.[0-9]\+\>/
+syntax match yaraNumberSize /\<\([0-9]\+\|0x[0-9a-fA-F]\+\)\(MB\|KB\)\>/
+
+" Comments
+syntax match yaraCommentInline /\/\/.*/
+syntax region yaraCommentBlock start=/\/\*/ end=/\*\//
+
+highlight default link yaraKeyword Keyword
+highlight default link yaraRuleSection PreProc
+highlight default link yaraIdentifier Identifier
+highlight default link yaraIdentifierOccurrence Identifier
+highlight default link yaraIdentifierOffset Identifier
+highlight default link yaraIdentifierMatchLength Identifier
+highlight default link yaraStringText String
+highlight default link yaraStringTextFormat Special
+highlight default link yaraStringHex String
+highlight default link yaraStringHexFormat Special
+highlight default link yaraStringRegex String
+highlight default link yaraStringRegexModifiers Special
+highlight default link yaraNumberInt Number
+highlight default link yaraNumberFloat Number
+highlight default link yaraNumberSize Number
+highlight default link yaraCommentInline Comment
+highlight default link yaraCommentBlock Comment
+
 " Make sure that the syntax file is loaded at most once.
 let b:current_syntax = "yara"
