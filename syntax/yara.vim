@@ -3,7 +3,7 @@
 " Language:     YARA
 " Maintainer:   Petr Zemek <s3rvac@gmail.com>
 " Home Page:    https://github.com/s3rvac/vim-syntax-yara
-" Last Change:  2017-10-21 14:57:00 +0200
+" Last Change:  2018-10-26 06:17:19 +0200
 "
 " The MIT License (MIT)
 "
@@ -35,7 +35,7 @@ endif
 syntax case match
 
 " Keywords
-syntax keyword yaraKeyword all and any ascii at condition entrypoint false filesize for fullword global import in include int16 int16be int32 int32be int8 int8be matches meta nocase not of or private rule strings them true uint16 uint16be uint32 uint32be uint8 uint8be wide contains
+syntax keyword yaraKeyword all and any ascii at condition entrypoint false filesize for fullword global import in include int16 int16be int32 int32be int8 int8be matches meta nocase not of or xor private rule strings them true uint16 uint16be uint32 uint32be uint8 uint8be wide contains
 syntax keyword yaraRuleSection condition meta strings
 
 " Identifiers
