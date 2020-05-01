@@ -2,7 +2,7 @@ Vim Syntax Highlighting for YARA Rules
 ======================================
 
 A Vim syntax-highlighting file for [YARA](https://virustotal.github.io/yara/)
-rules. Covers YARA 3.11.
+rules. Covers YARA 4.0.
 
 ![Screenshot](screenshot.png "Syntax highlighting in action.")
 
