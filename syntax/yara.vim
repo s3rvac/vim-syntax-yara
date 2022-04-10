@@ -3,7 +3,7 @@
 " Language:     YARA
 " Maintainer:   Petr Zemek <s3rvac@gmail.com>
 " Home Page:    https://github.com/s3rvac/vim-syntax-yara
-" Last Change:  2021-05-15 15:40:30 +0200
+" Last Change:  2022-04-10 09:30:00 +0200
 "
 " The MIT License (MIT)
 "
@@ -35,7 +35,7 @@ endif
 syntax case match
 
 " Keywords
-syntax keyword yaraKeyword all and any ascii at base64 base64wide condition endswith entrypoint false filesize for fullword global import icontains iendswith in include int16 int16be int32 int32be int8 int8be istartswith matches meta nocase not of or private rule startswith strings them true uint16 uint16be uint32 uint32be uint8 uint8be wide xor
+syntax keyword yaraKeyword all and any ascii at base64 base64wide condition defined endswith entrypoint false filesize for fullword global import icontains iendswith iequals in include int16 int16be int32 int32be int8 int8be istartswith matches meta nocase not of or private rule startswith strings them true uint16 uint16be uint32 uint32be uint8 uint8be wide xor
 " Keywords that are identical to a Vim option have to be defined via match, see
 " https://vimhelp.org/syntax.txt.html#E789.
 syntax match yaraKeyword /\<contains\>/
