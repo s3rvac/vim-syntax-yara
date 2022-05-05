@@ -1,13 +1,11 @@
-Vim Syntax Highlighting for YARA Rules
-======================================
+# Vim Syntax Highlighting for YARA Rules
 
 A Vim syntax-highlighting file for [YARA](https://virustotal.github.io/yara/)
 rules. Covers YARA versions up to v4.2.
 
 ![Screenshot](screenshot.png "Syntax highlighting in action.")
 
-Installation
-============
+## Installation
 
 The installation has two steps.
 
@@ -28,8 +26,7 @@ create it.
 autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
 ```
 
-License
--------
+## License
 
 Copyright (c) 2017 Petr Zemek (s3rvac@gmail.com) and contributors.
 
