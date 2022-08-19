@@ -56,7 +56,7 @@ syntax region yaraStringRegex start=/\// end=/\// skip=/\(\\\\\|\\\/\)/
 syntax match yaraStringRegexModifiers /\/\@<=[is]\+\>/
 
 " Numbers
-syntax match yaraNumberInt /\<\([0-9]\+\|0x[0-9a-fA-F]\+\)\>/
+syntax match yaraNumberInt /\<\([0-9]\+\|0x[0-9a-fA-F]\+\|0o[0-7]\+\)\>/
 syntax match yaraNumberFloat /\<[0-9]\+\.[0-9]\+\>/
 syntax match yaraNumberSize /\<\([0-9]\+\|0x[0-9a-fA-F]\+\)\(MB\|KB\)\>/
 
