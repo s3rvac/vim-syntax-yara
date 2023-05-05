@@ -7,9 +7,7 @@ rules. Covers YARA versions up to v4.2.
 
 ## Installation
 
-The installation has two steps.
-
-(1) If you use [pathogen](https://github.com/tpope/vim-pathogen), simply go
+If you use [pathogen](https://github.com/tpope/vim-pathogen), simply go
 into the `bundle` directory and clone the repository in there:
 ```
 cd ~/.vim/bundle
@@ -17,14 +15,10 @@ git clone https://github.com/s3rvac/vim-syntax-yara.git
 ```
 You can also install the plugin manually by copying the
 [`syntax/yara.vim`](https://raw.githubusercontent.com/s3rvac/vim-syntax-yara/master/syntax/yara.vim)
-file to your `~/.vim/syntax` directory. If that directory does not exist,
-create it.
-
-(2) Put the following autocommand to your `.vimrc`:
-```
-" Consider all .yar/.yara files to be YARA files.
-autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
-```
+file to your `~/.vim/syntax` directory and the
+[`ftdetect/yara.vim`](https://raw.githubusercontent.com/s3rvac/vim-syntax-yara/master/ftdetect/yara.vim)
+file to your `~/.vim/ftdetect` directory. If these directories do not exist,
+create them.
 
 ## License
 
