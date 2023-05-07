@@ -1,1 +1,1 @@
-autocmd! BufNewFile,BufRead *.yar,*.yara setfiletype yara
+autocmd! BufNewFile,BufRead *.yar,*.yara set filetype=yara
