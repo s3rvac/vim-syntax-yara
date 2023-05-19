@@ -50,7 +50,7 @@ syntax match yaraIdentifierMatchLength /![a-zA-Z0-9_]*\(\[[^\]]\+\]\)\?/
 " Strings
 syntax region yaraStringText start=/"/ end=/"/ skip=/\(\\\\\|\\"\)/ contains=yaraStringTextFormat
 syntax match yaraStringTextFormat /\(\\"\|\\\\\|\\t\|\\r\|\\n\|\\x[0-9a-fA-F]\{2\}\)/ contained
-syntax match yaraStringHex /{\([-0-9a-fA-F \t()\[\]|?]\|\n\)\+[-0-9a-fA-F()\[\]|?]\([-0-9a-fA-F \t()\[\]|?]\|\n\)\+}/ contains=yaraStringHexFormat
+syntax match yaraStringHex /{\(\_s*\|[-0-9a-fA-F()\[\]|?]\|\/\/.*\_$\|\/\*\_.\{-}\*\/\)\+}/ contains=yaraStringHexFormat,yaraCommentInline,yaraCommentBlock
 syntax match yaraStringHexFormat /[-()\[\]|?]/ contained
 syntax region yaraStringRegex start=/\// end=/\// skip=/\(\\\\\|\\\/\)/
 syntax match yaraStringRegexModifiers /\/\@<=[is]\+\>/
