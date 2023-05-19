@@ -3,7 +3,7 @@
 " Language:     YARA
 " Maintainer:   Petr Zemek <s3rvac@gmail.com>
 " Home Page:    https://github.com/s3rvac/vim-syntax-yara
-" Last Change:  2023-02-08 19:04:26 +0100
+" Last Change:  2023-05-19 18:14:54 +0200
 "
 " The MIT License (MIT)
 "
