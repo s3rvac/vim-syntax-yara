@@ -22,7 +22,7 @@ create them.
 
 ## License
 
-Copyright (c) 2017 Petr Zemek (s3rvac@gmail.com) and contributors.
+Copyright (c) 2017 Petr Zemek (s3rvac@petrzemek.net) and contributors.
 
 Distributed under the MIT license. See the
 [`LICENSE`](https://github.com/s3rvac/vim-syntax-yara/blob/master/LICENSE)
