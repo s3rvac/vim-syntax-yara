@@ -3,7 +3,7 @@
 " Language:     YARA
 " Maintainer:   Petr Zemek <s3rvac@petrzemek.net>
 " Home Page:    https://github.com/s3rvac/vim-syntax-yara
-" Last Change:  2023-05-19 18:14:54 +0200
+" Last Change:  2024-01-30 16:11:11 +0100
 "
 " The MIT License (MIT)
 "
@@ -50,8 +50,8 @@ syntax match yaraIdentifierMatchLength /![a-zA-Z0-9_]*\(\[[^\]]\+\]\)\?/
 " Strings
 syntax region yaraStringText start=/"/ end=/"/ skip=/\(\\\\\|\\"\)/ contains=yaraStringTextFormat
 syntax match yaraStringTextFormat /\(\\"\|\\\\\|\\t\|\\r\|\\n\|\\x[0-9a-fA-F]\{2\}\)/ contained
-syntax match yaraStringHex /{\(\_s*\|[-0-9a-fA-F()\[\]|?]\|\/\/.*\_$\|\/\*\_.\{-}\*\/\)\+}/ contains=yaraStringHexFormat,yaraCommentInline,yaraCommentBlock
-syntax match yaraStringHexFormat /[-()\[\]|?]/ contained
+syntax match yaraStringHex /{\(\_s*\|[-0-9a-fA-F()\[\]|?~]\|\/\/.*\_$\|\/\*\_.\{-}\*\/\)\+}/ contains=yaraStringHexFormat,yaraCommentInline,yaraCommentBlock
+syntax match yaraStringHexFormat /[-()\[\]|?~]/ contained
 syntax region yaraStringRegex start=/\// end=/\// skip=/\(\\\\\|\\\/\)/
 syntax match yaraStringRegexModifiers /\/\@<=[is]\+\>/
 
