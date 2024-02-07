@@ -7,12 +7,31 @@ rules. Covers YARA versions up to v4.3.
 
 ## Installation
 
-If you use [pathogen](https://github.com/tpope/vim-pathogen), simply go
-into the `bundle` directory and clone the repository in there:
-```
+The installation depends on the plugin manager you use (if any). Here are some of the options:
+
+### vim-pathogen
+
+If you use [vim-pathogen](https://github.com/tpope/vim-pathogen), go into the
+`bundle` directory and clone the repository in there:
+```bash
 cd ~/.vim/bundle
 git clone https://github.com/s3rvac/vim-syntax-yara.git
 ```
+
+### lazy.nvim
+
+If you use [lazy.nvim](https://github.com/folke/lazy.nvim), add the following
+piece of code into your plugin configuration:
+```lua
+-- Vim syntax highlighting for YARA rules
+-- https://github.com/s3rvac/vim-syntax-yara
+{
+    "s3rvac/vim-syntax-yara",
+}
+```
+
+### Manual installation
+
 You can also install the plugin manually by copying the
 [`syntax/yara.vim`](https://raw.githubusercontent.com/s3rvac/vim-syntax-yara/master/syntax/yara.vim)
 file to your `~/.vim/syntax` directory and the
