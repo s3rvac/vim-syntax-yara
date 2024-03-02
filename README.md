@@ -1,6 +1,6 @@
 # Vim syntax highlighting for YARA rules
 
-A Vim syntax-highlighting file for [YARA](https://virustotal.github.io/yara/)
+A Vim syntax-highlighting plugin for [YARA](https://virustotal.github.io/yara/)
 rules. Covers YARA versions up to v4.3.
 
 ![Screenshot](screenshot.png "Syntax highlighting in action.")
