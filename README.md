@@ -13,7 +13,7 @@ rules.
 ## Installation
 
 The installation depends on the plugin manager you use (if any). Here are some
-of the options:
+of the available options:
 
 ### vim-pathogen
 
