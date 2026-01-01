@@ -12,7 +12,8 @@ rules.
 
 ## Installation
 
-The installation depends on the plugin manager you use (if any). Here are some of the options:
+The installation depends on the plugin manager you use (if any). Here are some
+of the options:
 
 ### vim-pathogen
 
